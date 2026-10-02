@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cadastro de Cliente — SERVIX</title>
+<link rel="icon" type="image/png" href="https://i.postimg.cc/QxPKh1kx/83fb69c1-108b-4dad-8e00-5b7ead62e1db.png" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html" class="brand">
+    <img src="https://i.postimg.cc/QxPKh1kx/83fb69c1-108b-4dad-8e00-5b7ead62e1db.png" alt="SERVIX" />
+    <span>SERVIX</span>
+  </a>
+  <span class="site-tag" style="background:#DCFCE7;color:#15803D;">Cadastro de Cliente</span>
+</header>
+
+<main class="main">
+
+  <section class="hero">
+    <span class="eyebrow" style="background:#DCFCE7;color:#15803D;">● Para clientes</span>
+    <h1>Crie sua conta de cliente SERVIX</h1>
+    <p>Cadastre-se para solicitar serviços de profissionais qualificados na sua região.</p>
+  </section>
+
+  <section class="form-wrap">
+    <div class="card">
+      <div id="alerta" class="alerta" style="display: none;"></div>
+
+      <form id="form" novalidate>
+
+        <h2 class="section-title"><span class="num" style="background:linear-gradient(135deg,#16A34A,#15803D)">1</span> Tipo de conta</h2>
+
+        <div class="tipos">
+          <label class="tipo">
+            <input type="radio" name="tipo" value="pessoa-fisica" checked />
+            <div class="tipo-card">
+              <strong>👤 Pessoa Física</strong>
+              <small>Para uso pessoal</small>
+            </div>
+          </label>
+          <label class="tipo">
+            <input type="radio" name="tipo" value="empresa" />
+            <div class="tipo-card">
+              <strong>🏢 Empresa</strong>
+              <small>Para sua empresa</small>
+            </div>
+          </label>
+        </div>
+
+        <h2 class="section-title"><span class="num" style="background:linear-gradient(135deg,#16A34A,#15803D)">2</span> Dados pessoais</h2>
+
+        <div class="field">
+          <label>Nome completo <span class="req">*</span></label>
+          <input type="text" name="nome" required />
+          <small class="err"></small>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label>E-mail <span class="req">*</span></label>
+            <input type="email" name="email" required />
+            <small class="err"></small>
+          </div>
+          <div class="field">
+            <label>Telefone / WhatsApp <span class="req">*</span></label>
+            <input type="tel" name="telefone" required />
+            <small class="err"></small>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label>Senha <span class="req">*</span></label>
+            <input type="password" name="senha" required minlength="6" />
+            <small class="err"></small>
+          </div>
+          <div class="field">
+            <label>Confirmar senha <span class="req">*</span></label>
+            <input type="password" name="senhaConfirm" required />
+            <small class="err"></small>
+          </div>
+        </div>
+
+        <div class="field">
+          <label id="label-doc">CPF (opcional)</label>
+          <input type="text" name="cpfCnpj" maxlength="18" />
+        </div>
+
+        <h2 class="section-title"><span class="num" style="background:linear-gradient(135deg,#16A34A,#15803D)">3</span> Localização</h2>
+
+        <div class="grid-2">
+          <div class="field">
+            <label>Cidade <span class="req">*</span></label>
+            <input type="text" name="cidade" required />
+            <small class="err"></small>
+          </div>
+          <div class="field">
+            <label>Estado <span class="req">*</span></label>
+            <select name="estado" required>
+              <option value="">Selecione</option>
+              <option value="AC">Acre</option><option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option><option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option><option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option><option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option><option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option><option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option><option value="PA">Pará</option>
+              <option value="PB">Paraíba</option><option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option><option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option><option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option><option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option><option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option><option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+            <small class="err"></small>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label>Bairro</label>
+            <input type="text" name="bairro" />
+          </div>
+          <div class="field">
+            <label>CEP</label>
+            <input type="text" name="cep" maxlength="9" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Endereço</label>
+          <input type="text" name="endereco" placeholder="Rua, número, complemento" />
+        </div>
+
+        <div class="termos" style="background:#DCFCE7;">
+          <label>
+            <input type="checkbox" name="termos" />
+            Concordo com os <a href="#" style="color:#16A34A;">Termos de Uso</a> e a <a href="#" style="color:#16A34A;">Política de Privacidade</a>
+          </label>
+          <small class="err"></small>
+        </div>
+
+        <button type="submit" class="btn" id="btn" style="background:linear-gradient(135deg,#16A34A,#15803D);box-shadow:0 18px 40px rgba(22,163,74,.28);">
+          <span class="btn-text">Criar minha conta de cliente</span>
+          <span class="spinner"></span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; <span id="ano"></span> SERVIX — Cadastro de Cliente</p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
